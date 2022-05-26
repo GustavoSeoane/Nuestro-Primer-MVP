@@ -15,4 +15,11 @@ def fechaActual(request):
 
 # para vincular con la solapa de template1 - evitando poner la ruta. Hay que ajsutar setting Dir Base
 def probando_Tem (request):
-    return render(request, 'template1.html', context = {})
+    context = {
+        'Nombre' : 'Gustavo',
+        'Apellido' : 'Seoane',
+        'Edad' : '34',
+        'Fecha_Nacimiento' : '08/07/1987',
+        'Fecha' : datetime.now().date()
+    }
+    return render(request, 'template1.html', context = context)
